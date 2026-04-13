@@ -1,10 +1,16 @@
-﻿namespace Room_Api.DTOs
+﻿using System;
+
+namespace Room_Api.DTOs
 {
     public class ReviewDto
     {
-        public string UserName { get; set; }
+        public int Id { get; set; }
+        public int BookingId { get; set; }
+        public int RoomId { get; set; }
+        public string UserId { get; set; } = string.Empty;
+        public string UserName { get; set; } = string.Empty;
         public int Rating { get; set; }
-        public string Comment { get; set; }
+        public string Comment { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
     }
 }

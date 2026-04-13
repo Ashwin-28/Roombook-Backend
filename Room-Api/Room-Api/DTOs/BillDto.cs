@@ -2,6 +2,7 @@
 {
     public class BillDto
     {
+        public int BookingId { get; set; }
         public decimal RoomCharge { get; set; }
         public decimal ServiceCharge { get; set; }
         public decimal DemandSurcharge { get; set; }
