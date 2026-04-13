@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Room_Api.Data;
-using Room_Api.Services.Dto;
+using Room_Api.DTOs;
 using Room_Api.Services.Interfaces;
 
 namespace Room_Api.Services

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Room_Api.Data;
-using Room_Api.Services.Dto;
+using Room_Api.DTOs;
 using Room_Api.Services.Interfaces;
 
 namespace Room_Api.Services
@@ -47,7 +47,13 @@ namespace Room_Api.Services
                 RoomType = room.RoomType,
                 Description = room.Description,
                 BasePrice = room.BasePrice,
-                Amenities = room.RoomAmenities.Select(x => x.Amenity.Name).ToList()
+                Amenities = room.RoomAmenities.Select(x => new AmenityDto {
+                    Id = x.Amenity.Id,
+                    Name = x.Amenity.Name,
+                    Description = x.Amenity.Description,
+                    Price = x.Amenity.Price,
+                    Category = x.Amenity.Category
+                }).ToList()
             };
         }
 
