@@ -13,7 +13,8 @@
         public decimal BasePrice { get; set; }      // Base price per night
         public bool IsAvailable { get; set; }
         public int MaxOccupancy { get; set; }
-        public ICollection<RoomAmenity> RoomAmenities { get; set; }
-        public ICollection<Booking> Bookings { get; set; }
+        public ICollection<RoomAmenity> RoomAmenities { get; set; } = new List<RoomAmenity>();
+        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+        public ICollection<Review> Reviews { get; set; } = new List<Review>();
     }
 }
